@@ -1,5 +1,8 @@
 # Changelog
 
+#### [0.0.5] - 2025-04-11
+- add: Repository github.
+
 #### [0.0.4] - 2025-04-11
 - Fix: Se reorganizan los archivos del package.
 - Fix: WASM compatibility
