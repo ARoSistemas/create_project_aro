@@ -1,5 +1,10 @@
 # Changelog
 
+#### [0.0.6] - 2025-07-27
+- update: Update Flutter 3.32.6 Dart 3.8.0
+- update: Update Dart 3.8.0
+- Add: Interactive Mode
+
 #### [0.0.5] - 2025-04-11
 - add: Repository github.
 
