@@ -3,41 +3,48 @@ import 'src/commons/provider.dart';
 import 'src/commons/riverpod.dart';
 import 'src/commons/creations.dart';
 import 'src/commons/file_structure.dart';
-
 import 'src/platform/io_commands.dart';
+
+// Para modo interactivo
+import 'package:interact/interact.dart';
 
 /// The main entry point of the application.
 ///
 /// This function handles command-line flags, determines the state manager and file type to use,
 /// creates the project structure, and applies the necessary configurations.
 Future<void> main(List<String> flags) async {
-  /// CommandsIO instance
+  if (flags.isEmpty) {
+    final gestorIndex = Select(
+      prompt: 'What state management solution do you want to use?',
+      options: ['BLoC', 'Provider', 'Riverpod'],
+    ).interact();
+
+    final tipoIndex = Select(
+      prompt:
+          'Do you want to generate a functional example or just empty folders?',
+      options: ['Functional demo', 'Empty folders'],
+    ).interact();
+
+    // Map selections to flags
+    final gestorFlag = ['--b', '--p', '--r'][gestorIndex];
+    final tipoFlag = ['--d', '--e'][tipoIndex];
+    flags = [gestorFlag, tipoFlag];
+  }
+
   final CommandsIO ioCommands = CommandsIO();
-
-  /// Flag cleaning and validation
   Set<String> flagsOk = validateFlags(flags);
-
-  /// Get the current path
   final String rootDir = ioCommands.getCurrentPath();
-
-  /// Determine the state manager to create
   final String stateManager = getStateManager(flagsOk);
-
-  /// Determine the type of file to create: Demo or Empty
   final String fileType = getFileType(flagsOk);
 
-  /// Create structure by default BLoC
   createStructureEmpty(rootDir: rootDir, ioCommands: ioCommands);
 
-  /// apply configuration
   await createProject(
     ioCommands: ioCommands,
     rootDir: rootDir,
     stateManager: stateManager,
     fileType: fileType,
   );
-
-  /// Message finish
   ioCommands.logARo('''
 
     ___    ____           _____ _      __
@@ -195,10 +202,7 @@ Future<void> createProject({
   if (fileType.isNotEmpty) {
     /// Create empty files
     if (fileType == 'empty') {
-      await createEmptyFile(
-        ioCommands: ioCommands,
-        rootDir: rootDir,
-      );
+      await createEmptyFile(ioCommands: ioCommands, rootDir: rootDir);
     } else if (fileType == 'demo') {
       /// if type of file is demo, create main.dart
       await createFile(

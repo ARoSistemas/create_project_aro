@@ -77,6 +77,21 @@ for Riverpod
    ...
 ```
 
+
+## 🧑‍💻 Interactive Mode
+
+You can use the interactive mode simply by running:
+
+```sh
+dart run create_project_aro:create
+```
+
+If you don't provide any flags, you will be prompted to select:
+- The state manager (BLoC, Provider, Riverpod)
+- The type of generation (Functional demo or Empty folders)
+
+---
+
 ## 🧩 AVAILABLE COMMANDS
 
 
@@ -91,6 +106,24 @@ for Riverpod
 | `dart run create_project_aro:create --b --e`   | Creates Structure + empty files using **BLoC**.               |
 | `dart run create_project_aro:create --p --e`   | Creates Structure + empty files using **Provider**.           |
 | `dart run create_project_aro:create --r --e`   | Creates Structure + empty files using **Riverpod**.           |
+
+
+## 📦 Install as a dev dependency
+
+It is recommended to add `create_project_aro` as a dev dependency:
+
+```sh
+dart pub add --dev create_project_aro
+```
+
+And in your `pubspec.yaml`:
+
+```yaml
+dev_dependencies:
+  create_project_aro: ^0.0.5
+```
+
+---
 
 ## 🧩About dependencies
 

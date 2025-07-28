@@ -1,12 +1,12 @@
 name: create_project_aro
 description: "This package generates a professional directory structure for Flutter projects with a focus on clean architecture."
-version: 0.0.5
+version: 0.0.6
 homepage: https://arosistemas.com/
 repository: https://github.com/ARoSistemas/create_project_aro
 
 environment:
-  sdk: ^3.6.2
-  flutter: ">=1.17.0"
+  sdk: ^3.8.0
+  flutter: ">=3.32.0"
 
 dependencies:
   flutter:
@@ -16,5 +16,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  interact: ^2.2.0
 
 flutter:
