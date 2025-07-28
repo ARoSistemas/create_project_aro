@@ -1,5 +1,8 @@
 # Changelog
 
+#### [0.0.9] - 2025-07-27
+- Fix: Spelling corrections in MDs 
+
 #### [0.0.8] - 2025-07-27
 - Fix: Fixed example.md for interactive mode
 
