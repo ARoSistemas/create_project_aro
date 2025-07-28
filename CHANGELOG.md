@@ -1,5 +1,8 @@
 # Changelog
 
+#### [0.0.8] - 2025-07-27
+- Fix: Fixed example.md for interactive mode
+
 #### [0.0.7] - 2025-07-27
 - Fix: Interactive Mode. Now with DART only
 

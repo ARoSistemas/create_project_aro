@@ -2,15 +2,16 @@
 
 # 🚀 Example: How to use create_project_aro
 
+
 ## 🧑‍💻 Interactive Mode
 
-You can use the interactive mode to generate your project structure without remembering any flags:
+You can use the interactive mode simply by running:
 
 ```sh
-dart run bin/interactive.dart
+dart run create_project_aro:create
 ```
 
-You will be prompted to select:
+If you don't provide any flags, you will be prompted in the terminal to select:
 - The state manager (BLoC, Provider, Riverpod)
 - The type of generation (Functional demo or Empty folders)
 
