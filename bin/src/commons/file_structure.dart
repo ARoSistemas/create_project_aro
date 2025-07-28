@@ -132,120 +132,143 @@ Future<void> createEmptyFile({
   ''');
 
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/core/errors/failures.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/core/errors/failures.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/core/network/api_client.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/core/network/api_client.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/core/network/exceptions.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/core/network/exceptions.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/core/network/network_info.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/core/network/network_info.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/core/utils/results.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/core/utils/results.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/core/utils/input_converter.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/core/utils/input_converter.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/core/utils/validators.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/core/utils/validators.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/core/widgets/error_widget.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/core/widgets/error_widget.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/core/widgets/loading_widget.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/core/widgets/loading_widget.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/config/constans/app_constans.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/config/constans/app_constans.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/config/constans/app_env.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/config/constans/app_env.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/config/constans/app_keys.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/config/constans/app_keys.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/config/constans/app_enums.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/config/constans/app_enums.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/config/router/app_router.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/config/router/app_router.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/config/styles/app_colors.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/config/styles/app_colors.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/config/styles/app_styles.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/config/styles/app_styles.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/config/themes/app_themes.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/config/themes/app_themes.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/data/datasources/local/local_data_source.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/data/datasources/local/local_data_source.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/data/datasources/remote/remote_data_source.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/data/datasources/remote/remote_data_source.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/data/datasources/remote/api_client.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/data/datasources/remote/api_client.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/data/repositories/repository_impl.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/data/repositories/repository_impl.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/domain/entities/dtos/user_api.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/domain/entities/dtos/user_api.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/domain/entities/models/user.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/domain/entities/models/user.dart',
+    content: '',
+  );
   await createFile(
     ioCommands: ioCommands,
     rootDir: rootDir,
@@ -253,38 +276,45 @@ Future<void> createEmptyFile({
     content: '',
   );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/domain/usecases/login_usecase.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/domain/usecases/login_usecase.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/injection/injection.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/injection/injection.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/presentation/pages/home/home_page.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/presentation/pages/home/home_page.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/presentation/widgets/login/email_input.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/presentation/widgets/login/email_input.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/presentation/widgets/login/password_input.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/presentation/widgets/login/password_input.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/utils/helpers/result.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/utils/helpers/result.dart',
+    content: '',
+  );
   await createFile(
-      ioCommands: ioCommands,
-      rootDir: rootDir,
-      pathFile: '/lib/app/utils/widgets/custom_button.dart',
-      content: '');
+    ioCommands: ioCommands,
+    rootDir: rootDir,
+    pathFile: '/lib/app/utils/widgets/custom_button.dart',
+    content: '',
+  );
 }
