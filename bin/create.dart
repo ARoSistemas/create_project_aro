@@ -5,8 +5,7 @@ import 'src/commons/creations.dart';
 import 'src/commons/file_structure.dart';
 import 'src/platform/io_commands.dart';
 
-// Para modo interactivo
-import 'package:interact/interact.dart';
+import 'dart:io';
 
 /// The main entry point of the application.
 ///
@@ -14,20 +13,26 @@ import 'package:interact/interact.dart';
 /// creates the project structure, and applies the necessary configurations.
 Future<void> main(List<String> flags) async {
   if (flags.isEmpty) {
-    final gestorIndex = Select(
-      prompt: 'What state management solution do you want to use?',
-      options: ['BLoC', 'Provider', 'Riverpod'],
-    ).interact();
+    print('What state management solution do you want to use?');
+    print('1) BLoC');
+    print('2) Provider');
+    print('3) Riverpod');
+    stdout.write('Select an option (1-3): ');
+    final gestorInput = stdin.readLineSync();
+    final gestorFlag = switch (gestorInput) {
+      '1' => '--b',
+      '2' => '--p',
+      '3' => '--r',
+      _ => '--b',
+    };
 
-    final tipoIndex = Select(
-      prompt:
-          'Do you want to generate a functional example or just empty folders?',
-      options: ['Functional demo', 'Empty folders'],
-    ).interact();
+    print('What type of generation do you want?');
+    print('1) Functional demo');
+    print('2) Empty folders');
+    stdout.write('Select an option (1-2): ');
+    final tipoInput = stdin.readLineSync();
+    final tipoFlag = tipoInput == '2' ? '--e' : '--d';
 
-    // Map selections to flags
-    final gestorFlag = ['--b', '--p', '--r'][gestorIndex];
-    final tipoFlag = ['--d', '--e'][tipoIndex];
     flags = [gestorFlag, tipoFlag];
   }
 
