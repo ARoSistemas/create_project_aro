@@ -42,10 +42,10 @@ dev_dependencies:
 
 ---
 
-Generate the default folder structure using **BLoC** (default):
+Generate the default folder structure using **BLoC**:
 
 ```sh
-dart run create_project_aro:create
+dart run create_project_aro:create --b
 ```
 
 Generate the structure for **Provider**:
@@ -133,3 +133,6 @@ flutter pub run build_runner build
 
 ---
 ℹ️ For more information, see the [README.md](../README.md).
+
+
+Visit my website [https://www.arosistemas.com](https://www.arosistemas.com).

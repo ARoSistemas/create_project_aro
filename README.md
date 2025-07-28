@@ -97,7 +97,7 @@ If you don't provide any flags, you will be prompted to select:
 
 | Command                             | Description                                                  |
 | ---------------------------------   | ------------------------------------------------------------ |
-| `dart run create_project_aro:create`           | Creates empty folder structure with BLoC by default.         |
+| `dart run create_project_aro:create`           | Start interactive mode         |
 | `dart run create_project_aro:create --p`       | Creates empty folder structure for **Provider**.              |
 | `dart run create_project_aro:create --r`       | Creates empty folder structure for **Riverpod**.              |
 | `dart run create_project_aro:create --b --d`   | Creates Structure + functional login demo using **BLoC**.     |
