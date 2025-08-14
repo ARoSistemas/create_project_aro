@@ -1,18 +1,13 @@
 # Changelog
 
-#### [0.0.9] - 2025-07-27
-- Fix: Spelling corrections in MDs 
-
-#### [0.0.8] - 2025-07-27
-- Fix: Fixed example.md for interactive mode
-
-#### [0.0.7] - 2025-07-27
-- Fix: Interactive Mode. Now with DART only
+#### [0.0.7] - 2025-08-14
+- Fix: Minor and spelling changes
 
 #### [0.0.6] - 2025-07-27
 - update: Update Flutter 3.32.6 Dart 3.8.0
 - update: Update Dart 3.8.0
-- Add: Interactive Mode
+- Add: Interactive Mode only dart
+- Fix: Fixed example.md for interactive mode
 
 #### [0.0.5] - 2025-04-11
 - add: Repository github.
