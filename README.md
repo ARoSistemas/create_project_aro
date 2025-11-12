@@ -1,6 +1,6 @@
 # 🛠️ Create Project ARo
 
-This package generates a professional directory structure for Flutter projects with a focus on **clean architecture** and allows you to include a basic login example using the state manager of your choice (**BLoC**, **Provider**, or **Riverpod**).
+This package generates a professional directory structure for Flutter projects with a focus on **clean architecture** and allows you to include a basic login example using the state manager of your choice (**BLoC**, **Provider**, **Riverpod**, or **GetX**).
 
 ## ✨ Features
 
@@ -77,6 +77,20 @@ for Riverpod
    ...
 ```
 
+for GetX
+```dart
+   ...
+   │     ├───📁presentation
+   │     │    ├──📁controllers
+   │     │    │   ├──📁login
+   │     │    │   └──📁signup
+   │     │    ├──📁bindings
+   │     │    ├──📁pages
+   │     │    │   ├──📁login
+   │     │    │   └──📁signup
+   ...
+```
+
 
 ## 🧑‍💻 Interactive Mode
 
@@ -87,7 +101,7 @@ dart run create_project_aro:create
 ```
 
 If you don't provide any flags, you will be prompted to select:
-- The state manager (BLoC, Provider, Riverpod)
+- The state manager (BLoC, Provider, Riverpod, GetX)
 - The type of generation (Functional demo or Empty folders)
 
 ---
@@ -98,14 +112,18 @@ If you don't provide any flags, you will be prompted to select:
 | Command                             | Description                                                  |
 | ---------------------------------   | ------------------------------------------------------------ |
 | `dart run create_project_aro:create`           | Start interactive mode         |
+| `dart run create_project_aro:create --b`       | Creates empty folder structure for **BLoC**.                  |
 | `dart run create_project_aro:create --p`       | Creates empty folder structure for **Provider**.              |
 | `dart run create_project_aro:create --r`       | Creates empty folder structure for **Riverpod**.              |
+| `dart run create_project_aro:create --g`       | Creates empty folder structure for **GetX**.                  |
 | `dart run create_project_aro:create --b --d`   | Creates Structure + functional login demo using **BLoC**.     |
 | `dart run create_project_aro:create --p --d`   | Creates Structure + functional login demo using **Provider**. |
 | `dart run create_project_aro:create --r --d`   | Creates Structure + functional login demo using **Riverpod**. |
+| `dart run create_project_aro:create --g --d`   | Creates Structure + functional login demo using **GetX**.     |
 | `dart run create_project_aro:create --b --e`   | Creates Structure + empty files using **BLoC**.               |
 | `dart run create_project_aro:create --p --e`   | Creates Structure + empty files using **Provider**.           |
 | `dart run create_project_aro:create --r --e`   | Creates Structure + empty files using **Riverpod**.           |
+| `dart run create_project_aro:create --g --e`   | Creates Structure + empty files using **GetX**.               |
 
 
 ## 📦 Install as a dev dependency
@@ -150,6 +168,9 @@ For Riverpod it's recommended to install:
     ```dart
     flutter pub run build_runner build
     ```
+--------------------------
+For GetX it's recommended to install:
+- **get: ^4.6.6**
 --------------------------
 
 ## ✅ LOGIN EXAMPLE DETAILS

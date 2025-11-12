@@ -1,5 +1,19 @@
 # Changelog
 
+#### [0.0.8] - 2025-11-12
+- Add: GetX state manager support (--g flag)
+- Add: Interactive mode now includes GetX as option 4
+- Add: Complete GetX implementation with:
+  - LoginController with reactive variables (.obs)
+  - Dependency injection with Bindings
+  - GetMaterialApp with named routes
+  - Login page with GetBuilder and Obx
+  - Navigation with Get.offNamed()
+  - Form validation and error handling
+- Update: README documentation with GetX examples
+- Fix: Consistent hint text usage across all state managers
+- Fix: Typo correction in Riverpod dependencies message
+
 #### [0.0.7] - 2025-08-14
 - Fix: Minor and spelling changes
 

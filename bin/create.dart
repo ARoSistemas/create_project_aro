@@ -1,6 +1,7 @@
 import 'src/commons/bloc.dart';
 import 'src/commons/provider.dart';
 import 'src/commons/riverpod.dart';
+import 'src/commons/getx.dart';
 import 'src/commons/creations.dart';
 import 'src/commons/file_structure.dart';
 import 'src/platform/io_commands.dart';
@@ -17,12 +18,14 @@ Future<void> main(List<String> flags) async {
     print('1) BLoC');
     print('2) Provider');
     print('3) Riverpod');
-    stdout.write('Select an option (1-3): ');
+    print('4) GetX');
+    stdout.write('Select an option (1-4): ');
     final gestorInput = stdin.readLineSync();
     final gestorFlag = switch (gestorInput) {
       '1' => '--b',
       '2' => '--p',
       '3' => '--r',
+      '4' => '--g',
       _ => '--b',
     };
 
@@ -98,7 +101,7 @@ Future<void> main(List<String> flags) async {
             
         It is recommended to execute the following commands:
           
-          flurtter pub add flutter_riverpod
+          flutter pub add flutter_riverpod
           flutter pub add riverpod_annotation
           flutter pub add riverpod_generator
 
@@ -112,7 +115,16 @@ Future<void> main(List<String> flags) async {
 
         ''');
         break;
-
+      case 'getx':
+        ioCommands.logARo('''
+     ⚙️  Remember to install the necessary dependencies for GETX state manager:
+              
+         It is recommended to execute the following commands:
+          
+          flutter pub add get
+          
+        ''');
+        break;
       default:
     }
   }
@@ -126,7 +138,7 @@ Future<void> main(List<String> flags) async {
 /// containing only the valid flags.
 Set<String> validateFlags(List<String> flags) {
   final uniqueFlags = flags.toSet();
-  const validFlags = {'--b', '--p', '--r', '--e', '--d'};
+  const validFlags = {'--b', '--p', '--r', '--g', '--e', '--d'};
   return uniqueFlags.intersection(validFlags);
 }
 
@@ -142,14 +154,16 @@ Set<String> validateFlags(List<String> flags) {
 /// - '--b': Returns 'bloc' for Bloc state management.
 /// - '--p': Returns 'provider' for Provider state management.
 /// - '--r': Returns 'riverpod' for Riverpod state management.
+/// - '--g': Returns 'getx' for GetX state management.
 ///
 /// **Returns**:
-/// - `String`: The name of the selected state manager ('bloc', 'provider', or 'riverpod').
+/// - `String`: The name of the selected state manager ('bloc', 'provider', 'riverpod', or 'getx').
 ///             Defaults to 'bloc' if no valid flag is found.
 String getStateManager(Set<String> flags) {
   if (flags.contains('--b')) return 'bloc';
   if (flags.contains('--p')) return 'provider';
   if (flags.contains('--r')) return 'riverpod';
+  if (flags.contains('--g')) return 'getx';
   return 'bloc';
 }
 
@@ -201,6 +215,9 @@ Future<void> createProject({
     case 'riverpod':
       presentationRiverpod(rootDir: rootDir, ioCommands: ioCommands);
       break;
+    case 'getx':
+      presentationGetX(rootDir: rootDir, ioCommands: ioCommands);
+      break;
   }
 
   /// Apply file types
@@ -247,6 +264,13 @@ Future<void> createProject({
           break;
         case 'riverpod':
           await createFilesRiverpods(
+            ioCommands: ioCommands,
+            rootDir: rootDir,
+            isEmpty: fileType == 'empty',
+          );
+          break;
+        case 'getx':
+          await createFilesGetX(
             ioCommands: ioCommands,
             rootDir: rootDir,
             isEmpty: fileType == 'empty',
